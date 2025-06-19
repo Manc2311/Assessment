@@ -74,7 +74,7 @@ export default function ScheduleSession() {
 
 
   return (
-    <Container maxWidth="md" sx={{ my: 4, px: { xs: 2, sm: 4 } }}>
+    <Container maxWidth="sm" sx={{ my: 4, px: { xs: 2, sm: 4 } }}>
       <Paper
         elevation={4}
         sx={{
@@ -96,7 +96,7 @@ export default function ScheduleSession() {
 
 
         <Grid container spacing={2}>
-          {/* Row 1 - Name and Mobile */}
+       
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -118,7 +118,6 @@ export default function ScheduleSession() {
             />
           </Grid>
 
-          {/* Row 2 - Checkbox, WhatsApp, Email */}
           <Grid item xs={12} sm={3} display="flex" alignItems="center">
             <FormControlLabel
               control={
@@ -153,8 +152,6 @@ export default function ScheduleSession() {
               sx={inputStyle}
             />
           </Grid>
-
-          {/* Row 3 - Address */}
           <Grid item xs={12}>
             <TextField
               fullWidth
