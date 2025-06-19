@@ -11,6 +11,7 @@ const patientsDB = [
   { name: 'Jane Smith', mobile: '9123456780', email: 'jane@example.com' },
 ];
 
+
 const patient = {
 
   name: '',
