@@ -12,8 +12,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<Home />} path='/' />
-          <Route element={<ScheduleSession />} path='/schedule' />
+          <Route path='/' element={<Home />}  />
+          <Route path='/schedule-session' element={<ScheduleSession />}  />
         </Routes>
       </BrowserRouter>
     </>
