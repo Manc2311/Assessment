@@ -4,16 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import ScheduleSession from './Assessment/ScheduleSession';
+import Home from './Home/Home';
 
 function App() {
   const [count, setCount] = useState(0)
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-<Route element={<ScheduleSession/>} path='/schedule' />
-    </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Home />} path='/' />
+          <Route element={<ScheduleSession />} path='/schedule' />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
