@@ -60,6 +60,7 @@ export default function ScheduleSession() {
     setPatientData(patient);
     setWhatsappSame(true);
   }
+console.log(existingPatient,sessionType,time,date,'.........modata');
 
   const handleSubmit = () => {
 
@@ -70,6 +71,12 @@ export default function ScheduleSession() {
       sessionType,
     };
     console.log('Scheduling session with:', data);
+    
+    setPatientData(patient);
+    setDate(null);
+    setExistingPatient(null);
+    setTime(null);
+    setSessionType('');
   };
 
 
@@ -199,7 +206,8 @@ export default function ScheduleSession() {
         </Typography>
         <Autocomplete
           options={patientList}
-          getOptionLabel={(option) => `${option.name} (${option.mobile})`}
+          getOptionLabel={(option) => option ? `${option.name} (${option.mobile})` : ''}
+          value={existingPatient}
           onChange={(e, val) => setExistingPatient(val)}
           renderInput={(params) => <TextField {...params} label="Select Patient" sx={inputStyle} />}
           sx={{ mb: 3 }}
