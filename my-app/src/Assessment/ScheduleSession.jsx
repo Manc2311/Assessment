@@ -60,7 +60,6 @@ export default function ScheduleSession() {
     setPatientData(patient);
     setWhatsappSame(true);
   }
-console.log(existingPatient,sessionType,time,date,'.........modata');
 
   const handleSubmit = () => {
 
@@ -105,7 +104,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
 
         <Grid container spacing={2}>
        
-          <Grid item xs={12} sm={6}>
+          <Grid size={6} item xs={12} sm={6}>
             <TextField
               fullWidth
               label="Full Name"
@@ -115,7 +114,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
               sx={inputStyle}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={6} item xs={12} sm={6}>
             <TextField
               fullWidth
               label="Mobile Number"
@@ -126,7 +125,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
             />
           </Grid>
 
-          <Grid item xs={12} sm={3} display="flex" alignItems="center">
+          <Grid size={8} item xs={12} sm={3} display="flex" alignItems="center">
             <FormControlLabel
               control={
                 <Checkbox
@@ -138,7 +137,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
               label="WhatsApp same as Mobile"
             />
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid size={4} item xs={12} sm={3}>
             {!whatsappSame && (
               <TextField
                 fullWidth
@@ -150,7 +149,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
               />
             )}
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={12} item xs={12} sm={6}>
             <TextField
               fullWidth
               label="Email ID"
@@ -160,7 +159,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
               sx={inputStyle}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item size={12} xs={12}>
             <TextField
               fullWidth
               multiline
@@ -174,7 +173,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
           </Grid>
 
           {/* Submit Button */}
-          <Grid item xs={12}>
+          <Grid size={6} item xs={12}>
             <Button
               fullWidth
               variant="contained"
@@ -219,7 +218,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
         </Typography>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={6} item xs={12} sm={6}>
               <DatePicker
                 label="Select Date"
                 value={date}
@@ -227,7 +226,7 @@ console.log(existingPatient,sessionType,time,date,'.........modata');
                 renderInput={(params) => <TextField fullWidth {...params} sx={inputStyle} />}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={6} item xs={12} sm={6}>
               <TimePicker
                 label="Select Time"
                 value={time}
