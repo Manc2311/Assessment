@@ -1,26 +1,3 @@
-// import React from "react";
-// import { useState } from "react";
-// import axios from "axios";
-
-// export default function Login() {
-//   const [mobile, setMobile] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const res = await axios.post('http://localhost:3000/login', { mobile, password });
-//     localStorage.setItem('token', res.data.token);
-//     window.location.href = '/calculator';
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <input placeholder="Mobile" value={mobile} onChange={e => setMobile(e.target.value)} />
-//       <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-//       <button type="submit">Login</button>
-//     </form>
-//   );
-// }
 
 import React, { useState } from "react";
 import {
