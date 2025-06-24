@@ -5,7 +5,7 @@ import {
   Paper, Grid,
   Divider
 } from '@mui/material';
-
+import APIURL from '../APIURL';
 export default function Register() {
   const [form, setForm] = useState({ name: '', dob: '', mobile: '', password: '' });
 
@@ -16,8 +16,8 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/register', form);
-      window.location.href = '/';
+      await axios.post(`${APIURL.url}/register`, form);
+      window.location.href = '/login';
     } catch (err) {
       alert('Registration failed');
     }

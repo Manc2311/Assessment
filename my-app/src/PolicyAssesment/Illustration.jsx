@@ -14,7 +14,7 @@ import {
     CircularProgress,
     Alert,
 } from '@mui/material';
-
+import APIURL from '../APIURL';
 export default function Illustration() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -30,7 +30,7 @@ export default function Illustration() {
         }
 
         axios
-            .get(`http://localhost:3000/api/illustration/${illustrationId}`)
+            .get(`${APIURL.url}/api/illustration/${illustrationId}`)
             .then((res) => {
                 setData(res.data);
                 setLoading(false);

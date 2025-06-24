@@ -6,6 +6,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import APIURL from '../APIURL';
 
 export default function Login() {
     const [mobile, setMobile] = useState("");
@@ -14,7 +15,7 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:3000/login", {
+            const res = await axios.post(`${APIURL.url}/login`, {
                 mobile,
                 password,
             });

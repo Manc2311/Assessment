@@ -6,6 +6,7 @@ import {
     Paper,
     Divider
 } from '@mui/material';
+import APIURL from '../APIURL';
 import axios from 'axios';
 
 export default function Calculator() {
@@ -21,7 +22,7 @@ export default function Calculator() {
     });
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/types').then(res => setTypes(res.data));
+        axios.get(`${APIURL.url}/api/types`).then(res => setTypes(res.data));
     }, []);
 
     const handleChange = (e) => {
@@ -31,9 +32,7 @@ export default function Calculator() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:3000/api/calculate', input);
-            console.log(res, 'data');
-            debugger
+            const res = await axios.post(`${APIURL.url}/api/calculate`, input);
             localStorage.setItem('illustrationId', JSON.stringify(res.data.id));
             window.location.href = '/illustration';
         } catch (err) {
